@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (5.2.2)
+  - DynamicBlurView (4.1.0)
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - PopupDialog
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DynamicBlurView
+    - Kingfisher
+    - PopupDialog
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: b7f7323bc4297db93381687b85764c18649e190d
+
+COCOAPODS: 1.10.0

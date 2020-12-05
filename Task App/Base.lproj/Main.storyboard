@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Task_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GT6-jF-um8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about" translatesAutoresizingMaskIntoConstraints="NO" id="Mfy-fc-Hri">
+                                <rect key="frame" x="0.0" y="763" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mfy-fc-Hri" secondAttribute="height" multiplier="207:64" id="3mK-mP-Vtz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGd-8v-FIm">
+                                <rect key="frame" x="0.0" y="763" width="414" height="128"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mfy-fc-Hri" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Vq-LQ-dDg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mfy-fc-Hri" secondAttribute="trailing" id="58g-mb-MWp"/>
+                            <constraint firstItem="GT6-jF-um8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BU9-u3-s2x"/>
+                            <constraint firstItem="GT6-jF-um8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JuP-gT-Rcx"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="centerX" secondItem="Mfy-fc-Hri" secondAttribute="centerX" id="Olg-Dn-d5J"/>
+                            <constraint firstAttribute="bottom" secondItem="Mfy-fc-Hri" secondAttribute="bottom" constant="5" id="UZC-xd-mhj"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="width" secondItem="Mfy-fc-Hri" secondAttribute="width" id="eTP-vE-vFL"/>
+                            <constraint firstItem="GT6-jF-um8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hgI-uK-R7s"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="height" secondItem="Mfy-fc-Hri" secondAttribute="height" id="j7g-GT-poo"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="leading" secondItem="Mfy-fc-Hri" secondAttribute="leading" id="k6t-hQ-WmP"/>
+                            <constraint firstAttribute="bottom" secondItem="GT6-jF-um8" secondAttribute="bottom" id="m6Q-4O-FsQ"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="centerY" secondItem="Mfy-fc-Hri" secondAttribute="centerY" id="szc-gs-J1C"/>
+                            <constraint firstItem="mGd-8v-FIm" firstAttribute="trailing" secondItem="Mfy-fc-Hri" secondAttribute="trailing" id="vu2-vm-kQ6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aboutImg" destination="Mfy-fc-Hri" id="8Yx-dS-1tb"/>
+                        <outlet property="aboutImgBtn" destination="mGd-8v-FIm" id="Acm-OG-Yvv"/>
+                        <outlet property="mapView" destination="GT6-jF-um8" id="ezT-G9-vyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about" width="1298" height="340"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

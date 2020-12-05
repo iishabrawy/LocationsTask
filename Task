@@ -1,0 +1,42 @@
+Hello ...
+
+Kindly follow the steps which will lead to produce the desired task (will call you on the mobile phone shortly) ...
+
+1- Use Xcode 12 to create a new single page application.
+
+2- Use the mapkit or google maps to add full screen google map to the main view controller (use this key in the Google Cloud Platform client API key or any provided key from your side - AIzaSyBa_gbnaVSTZ0LWqj3tl0-pLtMZErbUr8E).
+
+3- Use the attached POSTMAN webapi rest call with the provided body parameters.
+
+4- Create a model for retrieving the json response (user->bus->route->routePath) and (user->bus->route->stop_points) as one deserialized object(create the model as class), you can check first on POSTMAN to get familiar with json structure.
+
+5- With regard to networking, use Alamofire(preferred) or NsUrlSession then deserialize the result using the EVE reflection or ObjectMapper or any other professional way to get the deserialized object.
+
+6- Once you have deserialized the object, draw a continuous route over the map fragment along with stopPoints (as pins on the MAP) using the retrieved coordinates (the application main ui thread must not be blocked at all).
+
+7- Add an image (which support multiple screen sizes) at the bottom of the main view controller over the map view(5 constant autolayout constraint from bottom), once the image is clicked show a dialog which includes the content attribute(HTML content) retrieved from the following call, add a button inside the dialog to dismiss it (present the dialog with animation and dismiss it with contrary animation).
+URL: http://inaclick.online/mtc/aboutus/aboutUs
+Headers:
+Authorization: Bearer {token}, the token is included in the previous network call(checkCredentials), you may check the call first on POSTMAN in order to get familiar with the JSON structure.
+
+8- The network call must be handled on a worker thread(no blocking is permitted).
+
+9- It is recommended to use the Rxswift extensions(with RxAlamofire).
+_______________________________________________________________________
+
+It is very important to show how you will set the project structure(protocols, classes, dialogs, models, uiviews and viewcontrollers) & groups.
+It is very important to keep you code clean, optimized and reusable.
+Using specific design pattern like MVVM with mutable live data or mix of more than design pattern (reposiroty & strategy) is highly preferred.
+You should implement the OOP structure (BaseViewController for reusing same logic).
+It is recommended to design your app structure based on a design pattern like(MVP or MVVM[with observables]).
+
+You are free to include any third part library which may help you to complete the task.
+
+Once you have completed the task, zip it and send it back.
+Task completion estimation time is 8 to 12 hours.​​
+
+Best Regards
+E.Mohamed ElGendy
+​
+Technical Team Lead
+LinkedIN profile
